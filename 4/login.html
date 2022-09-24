@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap');
+        *{
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: "Poppins", sans-serif;
+        }
+
+        body{
+          display: grid;
+          height: 100vh;
+          grid-template-columns: 3fr;
+          grid-template-rows: 1.5fr 1.5fr;
+          grid-template-areas: "head" "footer";
+          margin: 0;
+          padding: 0;
+          height: 100vh;
+          overflow: hidden;
+        }
+
+        .home a{
+          color: #e9f4fb;
+          text-decoration: none;
+        }
+
+        .home{
+          margin-top: 300px;
+          width: 100px;
+          background: linear-gradient(#EB8B3F, #F62F40 );
+          border-radius: 50px;
+          width: 200px;
+          text-align: center;
+          padding: 10px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          cursor: pointer;
+        }
+
+        .center{
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 400px;
+          background: white;
+          border-radius: 10px;
+          box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+        }
+
+        .center h1{
+          text-align: center;
+          padding: 20px 0;
+          border-bottom: 1px solid silver;
+        }
+
+        .center form{
+          padding: 0 40px;
+          box-sizing: border-box;
+        }
+
+        form .txt_field{
+          position: relative;
+          border-bottom: 2px solid #adadad;
+          margin: 30px 0;
+        }
+
+        .txt_field input{
+          width: 100%;
+          padding: 0 5px;
+          height: 40px;
+          font-size: 16px;
+          border: none;
+          background: none;
+          outline: none;
+        }
+
+        .txt_field label{
+          position: absolute;
+          top: 50%;
+          left: 5px;
+          color: #adadad;
+          transform: translateY(-50%);
+          font-size: 16px;
+          pointer-events: none;
+          transition: .5s;
+        }
+
+        .txt_field span::before{
+          content: '';
+          position: absolute;
+          top: 40px;
+          left: 0;
+          width: 0%;
+          height: 2px;
+          background: #EB8B3F;
+          transition: .5s;
+        }
+
+        .txt_field input:focus ~ label,
+        .txt_field input:valid ~ label{
+          top: -5px;
+          color: #EB8B3F;
+        }
+
+        .txt_field input:focus ~ span::before,
+        .txt_field input:valid ~ span::before{
+          width: 100%;
+        }
+
+        .pass{
+          margin: -5px 0 20px 5px;
+          color: #a6a6a6;
+          cursor: pointer;
+        }
+
+        .pass:hover{
+          text-decoration: underline;
+        }
+        
+        input[type="submit"]{
+          width: 100%;
+          height: 50px;
+          border: 1px solid;
+          background: linear-gradient(#EB8B3F, #F62F40 );
+          border-radius: 25px;
+          font-size: 18px;
+          color: #e9f4fb;
+          font-weight: 700;
+          cursor: pointer;
+          outline: none;
+        }
+
+        input[type="submit"]:hover{
+          border-color: #EB8B3F;
+          transition: .5s;
+        }
+
+        .signup_link{
+          margin: 30px 0;
+          text-align: center;
+          font-size: 16px;
+          color: #666666;
+        }
+
+        .signup_link a{
+          color: #EB8B3F;
+          text-decoration: none;
+        }
+        .signup_link a:hover{
+          text-decoration: underline;
+        }
+
+        header {
+            grid-area: head;
+            background: linear-gradient(#EB8B3F, #F62F40 );
+            height: 100%;
+        }
+
+        header h2 {
+            color: white;
+            font-size: 40px;
+            text-transform: uppercase;
+            font-family: Verdana, sans-serif;
+            text-align: center;
+            padding-top:  150px;
+            padding-left: 10px;
+        }
+
+        header p  {
+            text-align: center;
+            font-size: 20px;
+            color: white;
+            margin-left: 70px;
+            margin-bottom: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+        }
+
+        footer {
+            grid-area: footer;
+        }
+
+
+    </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h2>Multi-Share of Madness</h2>
+      <p>We share files across the multiverse </p>
+    </header>
+    
+      <div class="center">
+        <h1>Log In</h1>
+        <form action="MOM.html">
+          <div class="txt_field">
+              <input type="text" required>
+              <label>Username</label>
+          </div>
+
+          <div class="txt_field">
+              <input type="password" required>
+              <label>Password</label>
+          </div>
+
+          <div class="pass">
+              <a href="forgot.html">Forgot Password?</a>
+          </div>
+
+          <input type="submit" value="Login">
+          <div class="signup_link">
+              <a href="Register.html">Sign up</a>
+          </div>
+        </form>
+      </div>
+
+      <div class="home"> 
+        <h1>
+          <a href="MOM.html">Home</a>   
+        </h1>
+      </div>
+  </div>
+</body>
+</html>
